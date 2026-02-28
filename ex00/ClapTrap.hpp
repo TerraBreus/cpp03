@@ -8,6 +8,7 @@ class ClapTrap
 		int			_hitPoints;
 		int			_energyPoints;
 		int			_attackDamage;
+		bool		checkClapTrap();
 		
 	public:
 		ClapTrap(std::string name);
