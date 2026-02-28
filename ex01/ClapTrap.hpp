@@ -3,12 +3,12 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string	_name;
 		int			_hitPoints;
 		int			_energyPoints;
 		int			_attackDamage;
-		bool		checkClapTrap();
+		bool		canAction();
 		
 	public:
 		ClapTrap(std::string name);

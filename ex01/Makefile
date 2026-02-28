@@ -1,9 +1,10 @@
-NAME := CLAPTRAP.EXE
+NAME := SCAVTRAP.EXE
 CPP := c++
 FLAGS := -Wall -Wextra -Werror
 
 SRC := \
 	   ClapTrap.cpp \
+	   ScavTrap.cpp \
 	   main.cpp
 
 OBJ := $(SRC:%.cpp=%.o)

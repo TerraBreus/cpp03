@@ -1,7 +1,7 @@
 #include "ClapTrap.hpp"
 #include <iostream>
 
-bool	ClapTrap::checkClapTrap()
+bool	ClapTrap::canAction()
 {
 	if (this->_hitPoints <= 0)
 	{
@@ -50,7 +50,7 @@ ClapTrap::~ClapTrap(void)
 
 void	ClapTrap::attack(const std::string& target)
 {
-	if (this->checkClapTrap())
+	if (this->canAction())
 	{
 		std::cout << "ClapTrap " << this->_name << " attacks ";
 		std::cout << target << ", causing " << this->_attackDamage;
@@ -63,13 +63,13 @@ void	ClapTrap::takeDamage(unsigned int amount)
 {
 	std::cout << "ClapTrap " << this->_name;
 	std::cout << " takes " << amount;
-	std::cout << " amount of damage." << std::endl;
+	std::cout << " points of damage." << std::endl;
 	this->_hitPoints -= amount;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->checkClapTrap())
+	if (this->canAction())
 	{
 		std::cout << "ClapTrap " << this->_name;
 		std::cout << " repairs itself for " << amount;
